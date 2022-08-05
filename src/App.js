@@ -6,17 +6,28 @@ import data from "./data"
 
 export default function App() {
 
-    const experiences = data.map(e=>{
+    const experiences = data.map(item=>{
         return <Card
-                    key = {e.id}
-                    img = {e.coverImg}
-                    rating = {e.stats.rating}
-                    reviewCount = {e.stats.reviewCount}
-                    country = {e.location}
-                    title = {e.title}
-                    price = {e.price}
-                    openSpots={e.openSpots}
-               />
+                    key = {item.id}
+                    {...item}
+                />
+
+            /*
+                   1st way:
+                   img = {item.coverImg}
+                    rating = {item.stats.rating}
+                    reviewCount = {item.stats.reviewCount}
+                    country = {item.location}
+                    title = {item.title}
+                    price = {item.price}
+                    openSpots={item.openSpots}
+
+                    2nd way: (Access using props.item)
+                    item = {item}
+
+                    3rd way: Using Spread syntax
+                    {...item}
+                    */
     })
 
     return (
