@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Airbnb Experiences Clone
 
 ![Screenshot](screenshot.png)
 
